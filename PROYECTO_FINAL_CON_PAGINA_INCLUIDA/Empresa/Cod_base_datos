@@ -1,0 +1,24 @@
+create database buycart;
+use buycart;
+
+create table produto(
+	idProducto int not null primary key AUTO_INCREMENT,
+	nombre varchar(20),
+    codigo varchar(20),
+    precio double,
+	stock int(20)
+);
+
+select *from producto;
+
+insert into producto(nombre, codigo, precio, stock) values('iphone 4s','p01', '8000','19');
+insert into producto(nombre, codigo, precio, stock) values('iphone 5','p02', '9500','10');
+insert into producto(nombre, codigo, precio, stock) values('iphone 5s','p03', '12000','5');
+insert into producto(nombre, codigo, precio, stock) values('iphone 6','p04', '15000','3');
+
+update producto set nombre='iphone 4s' where idProducto=1;
+
+select nombre, codigo, precio, stock from producto;
+
+drop table producto;
+drop database buycart;
